@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
-        <java.version>15</java.version>
+        <java.version>8</java.version>
         <github.global.server>github</github.global.server>
         <github.maven-plugin>0.12</github.maven-plugin>
         <joml.version>1.9.25</joml.version>
@@ -117,6 +117,14 @@
                         <phase>deploy</phase>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
